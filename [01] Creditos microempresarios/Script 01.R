@@ -6,7 +6,7 @@
 # Leyendo la base de datos ------------------------------------------------
 library(tidyverse)
 
-datos <- read_csv2(file="bases/creditos_otorgados_a_microempresarios.csv",
+datos <- read_csv2(file="Datos/creditos_otorgados_a_microempresarios.csv",
                   col_names = TRUE)
 
 datos |> dim()
@@ -142,7 +142,7 @@ ggplot(data=datos, aes(y=monto, x=actividad, fill=actividad)) +
   
 ggplot(data=datos, aes(y=monto, x=as.factor(ano), fill=as.factor(ano))) +
   geom_boxplot() +
-  labs(x="Actividad", y="Monto (millones $)")  
+  labs(x="Ano", y="Monto (millones $)")  
 
 # Densidades
 
